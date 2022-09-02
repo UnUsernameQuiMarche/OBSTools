@@ -16,6 +16,23 @@ Créez un dossier appelé "jre" et placez-y les fichiers JDKs extraits de l'arch
 
 C'est parti !
 
+```
+dossier racine
+│   OBStools by William.exe
+│
+└───jre
+    │   bin
+    │   conf
+    │   include
+    │   jmods
+    │   legal
+    │   lib
+    │   COPYRIGHT
+    │   LICENSE
+    │   README
+    │   release
+```
+
 ### Création d'une template
 
 #### Mise en place
