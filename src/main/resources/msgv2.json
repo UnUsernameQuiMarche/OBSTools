@@ -1,0 +1,354 @@
+{
+    "actioneds": [{
+            "titre": "Attente réponse client",
+            "duree": 0,
+            "balise": "",
+            "contenu": "Att Réponse Client"
+        }, {
+            "titre": "Mise en observation",
+            "duree": 24,
+            "balise": "strong",
+            "contenu": "OBS"
+        }, {
+            "titre": "Redémarrage du routeur",
+            "duree": 0,
+            "balise": "b",
+            "contenu": "Reload"
+        }, {
+            "titre": "Attente réponse BOA",
+            "duree": 0,
+            "balise": "",
+            "contenu": "Att Réponse BOA"
+        }, {
+            "titre": "Relance BOA",
+            "duree": 0,
+            "balise": "em",
+            "contenu": "Relance BOA"
+        }, {
+            "titre": "Relance client",
+            "duree": 0,
+            "balise": "em",
+            "contenu": "Relance Client"
+        }
+    ],
+    "onglets": [{
+            "nom": "Commentaire",
+            "groupes": [{
+                    "nom": "Redémarrage par rocade",
+                    "buttons": [{
+                            "texte": "Nominal",
+                            "nextsid": "Nominal KO Reload En Cours",
+                            "nom": "Redemarrage Rocade Nominal",
+                            "actionedsid": "Redémarrage du routeur",
+                            "type": "MsgBrut",
+                            "contenu": "Routeur nominal injoignable par ping. Redémarrage via la rocade."
+                        }, {
+                            "texte": "Secours",
+                            "nextsid": "Secours KO Reload En Cours",
+                            "nom": "Redemarrage Rocade Secours",
+                            "actionedsid": "Redémarrage du routeur",
+                            "type": "MsgBrut",
+                            "contenu": "Routeur secours injoignable par ping. Redémarrage via la rocade."
+                        }
+                    ]
+                }, {
+                    "nom": "Redémarrage bagots",
+                    "buttons": [{
+                            "texte": "Nominal",
+                            "nextsid": "Nominal Bagots Reload En Cours",
+                            "nom": "Redemarrage Bagots Nominal",
+                            "actionedsid": "Mise en observation",
+                            "type": "MsgTexte",
+                            "contenu": "Le routeur nominal présente de nombreux bagots. Redémarrage et mise en observation."
+                        }, {
+                            "texte": "Secours",
+                            "nextsid": "Secours Bagots Reload En Cours",
+                            "nom": "Redemarrage Bagots Secours",
+                            "actionedsid": "Mise en observation",
+                            "type": "MsgTexte",
+                            "contenu": "Le routeur secours présente de nombreux bagots. Redémarrage et mise en observation."
+                        }
+                    ]
+                }, {
+                    "nom": "Redémarrage par rocade impossible",
+                    "buttons": [{
+                            "texte": "Nominal",
+                            "nextsid": "Demande Levee de Doute Nominal",
+                            "nom": "Nominal KO Rocade inaccessible",
+                            "actionedsid": "Attente réponse client",
+                            "type": "MsgBrut",
+                            "contenu": "Routeur nominal injoignable par ping. Rocade inaccessible."
+                        }, {
+                            "texte": "Secours",
+                            "nextsid": "Demande Levee de Doute Secours",
+                            "nom": "Secours KO Rocade inaccessible",
+                            "actionedsid": "Attente réponse client",
+                            "type": "MsgBrut",
+                            "contenu": "Routeur secours injoignable par ping. Rocade inaccessible."
+                        }
+                    ]
+                }, {
+                    "nom": "Bagots persistant malgré redémarrage",
+                    "buttons": [{
+                            "texte": "Nominal",
+                            "nextsid": "Message BOA : Nominal bagots Redémarrage",
+                            "nom": "Bagots presistant Nominal",
+                            "actionedsid": "Mise en observation",
+                            "type": "MsgTexte",
+                            "contenu": "Les bagots sur le routeur nominal persistent malgré le redémarrage."
+                        }, {
+                            "texte": "Secours",
+                            "nextsid": "Message BOA : Secours bagots Redémarrage",
+                            "nom": "Bagots presistant Secours",
+                            "actionedsid": "Mise en observation",
+                            "type": "MsgTexte",
+                            "contenu": "Les bagots sur le routeur secours persistent malgré le redémarrage."
+                        }
+                    ]
+                }, {
+                    "nom": "Autre",
+                    "buttons": [{
+                            "texte": "Coup. Elec",
+                            "nextsid": null,
+                            "nom": "Coupure Electrique",
+                            "actionedsid": "Attente réponse client",
+                            "type": "MsgTexte",
+                            "contenu": "Coupure électrique détectée."
+                        }, {
+                            "texte": "Saturation",
+                            "nextsid": null,
+                            "nom": "Defaut de Saturation",
+                            "actionedsid": "Attente réponse client",
+                            "type": "MsgImage",
+                            "contenu": "Défaut de saturation détectée."
+                        }, {
+                            "texte": "ADELIA",
+                            "nextsid": "Message BOA : Incident ADELIA",
+                            "nom": "Incident ADELIA",
+                            "actionedsid": "Attente réponse BOA",
+                            "type": "MsgImage",
+                            "contenu": "Un incident ADELIA est en cours."
+                        }, {
+                            "texte": "Bagot Unique",
+                            "nextsid": null,
+                            "nom": "Bagot unique",
+                            "actionedsid": "Mise en observation",
+                            "type": "MsgTexte",
+                            "contenu": "Bagot unique, mise en observation."
+                        }, {
+                            "texte": "Pas ADELIA + Satur.",
+                            "nextsid": "Demande Levee de Doute Deux",
+                            "nom": "Site coupé",
+                            "actionedsid": "Attente réponse client",
+                            "type": "MsgBrut",
+                            "contenu": "Site coupé. Pas d'incident ADELIA, pas de saturation."
+                        }, {
+                            "texte": "Routeur Stable",
+                            "nextsid": null,
+                            "nom": "Routeur stable",
+                            "actionedsid": "Mise en observation",
+                            "type": "MsgTexteFormatted",
+                            "contenu": "Routeur stable depuis le redémarrage."
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "nom": "T5 - Message Client",
+            "groupes": [{
+                    "nom": "Redémarrage terminé - Lien KO",
+                    "buttons": [{
+                            "texte": "Nominal",
+                            "nextsid": null,
+                            "nom": "Nominal KO Reload Fait",
+                            "actionedsid": "Attente réponse client",
+                            "macro": "T5",
+                            "type": "MsgBrut",
+                            "contenu": "Bonjour,\n\nLe lien nominal est KO, un reload a été fait mais le défaut est toujours présent.\n\nNous souhaitons intervenir afin de rétablir l'accès.\n\nPourriez-vous nous fournir les horaires d'ouverture du site ainsi qu'un contact local ?\n\nCordialement."
+                        }, {
+                            "texte": "Secours",
+                            "nextsid": null,
+                            "nom": "Secours KO Reload Fait",
+                            "actionedsid": "Attente réponse client",
+                            "macro": "T5",
+                            "type": "MsgBrut",
+                            "contenu": "Bonjour,\n\nLe lien secours est KO, un reload a été fait mais le défaut est toujours présent.\n\nNous souhaitons intervenir afin de rétablir l'accès.\n\nPourriez-vous nous fournir les horaires d'ouverture du site ainsi qu'un contact local ?\n\nCordialement."
+                        }
+                    ]
+                }, {
+                    "nom": "Redémarrage terminé - Bagots",
+                    "buttons": [{
+                            "texte": "Nominal",
+                            "nextsid": null,
+                            "nom": "Nominal Bagots Reload Fait",
+                            "actionedsid": "Attente réponse client",
+                            "macro": "T5",
+                            "type": "MsgBrut",
+                            "contenu": "Bonjour,\n\nLe lien nominal a de nombreux bagots, un redémarrage du routeur a été effectué sans effet.\n\nNous souhaitons intervenir afin de rétablir l'accès.\n\nPourriez-vous nous fournir les horaires d'ouverture du site ainsi qu'un contact local ?\n\nCordialement."
+                        }, {
+                            "texte": "Secours",
+                            "nextsid": null,
+                            "nom": "Secours Bagots Reload Fait",
+                            "actionedsid": "Attente réponse client",
+                            "macro": "T5",
+                            "type": "MsgBrut",
+                            "contenu": "Bonjour,\n\nLe lien secours a de nombreux bagots, un redémarrage du routeur a été effectué sans effet.\n\nNous souhaitons intervenir afin de rétablir l'accès.\n\nPourriez-vous nous fournir les horaires d'ouverture du site ainsi qu'un contact local ?\n\nCordialement."
+                        }
+                    ]
+                }, {
+                    "nom": "Redémarrage en cours - Lien KO",
+                    "buttons": [{
+                            "texte": "Nominal",
+                            "nextsid": null,
+                            "nom": "Nominal KO Reload En Cours",
+                            "actionedsid": "Redémarrage du routeur",
+                            "macro": "T5",
+                            "type": "MsgBrut",
+                            "contenu": "Bonjour,\n\nLe lien nominal est KO, un redémarrage du routeur est en cours.\n\nEn cas de non résolution du défaut, nous souhaitons intervenir afin de rétablir l'accès.\n\nPourriez-vous nous fournir les horaires d'ouverture du site ainsi qu'un contact local ?\n\nCordialement."
+                        }, {
+                            "texte": "Secours",
+                            "nextsid": null,
+                            "nom": "Secours KO Reload En Cours",
+                            "actionedsid": "Redémarrage du routeur",
+                            "macro": "T5",
+                            "type": "MsgBrut",
+                            "contenu": "Bonjour,\n\nLe lien secours est KO, un redémarrage du routeur est en cours.\n\nEn cas de non résolution du défaut, nous souhaitons intervenir afin de rétablir l'accès.\n\nPourriez-vous nous fournir les horaires d'ouverture du site ainsi qu'un contact local ?\n\nCordialement."
+                        }
+                    ]
+                }, {
+                    "nom": "Redémarrage en cours - Bagots",
+                    "buttons": [{
+                            "texte": "Nominal",
+                            "nextsid": null,
+                            "nom": "Nominal Bagots Reload En Cours",
+                            "actionedsid": "Mise en observation",
+                            "macro": "T5",
+                            "type": "MsgBrut",
+                            "contenu": "Bonjour,\n\nLe lien nominal a de nombreux bagots, un redémarrage du routeur est en cours.\n\nEn cas de non résolution du défaut, nous souhaitons intervenir afin de rétablir l'accès.\n\nPourriez-vous nous fournir les horaires d'ouverture du site ainsi qu'un contact local ?\n\nCordialement."
+                        }, {
+                            "texte": "Secours",
+                            "nextsid": null,
+                            "nom": "Secours Bagots Reload En Cours",
+                            "actionedsid": "Mise en observation",
+                            "macro": "T5",
+                            "type": "MsgBrut",
+                            "contenu": "Bonjour,\n\nLe lien secours a de nombreux bagots, un redémarrage du routeur est en cours.\n\nEn cas de non résolution du défaut, nous souhaitons intervenir afin de rétablir l'accès.\n\nPourriez-vous nous fournir les horaires d'ouverture du site ainsi qu'un contact local ?\n\nCordialement."
+                        }
+                    ]
+                }, {
+                    "nom": "Demande levée de doute",
+                    "buttons": [{
+                            "texte": "Nominal",
+                            "nextsid": null,
+                            "nom": "Demande Levee de Doute Nominal",
+                            "actionedsid": "Attente réponse client",
+                            "macro": "T5",
+                            "type": "MsgBrut",
+                            "contenu": "Bonjour,\nSuite à votre incident, le routeur nominal est injoignable. Serait-il possible de procéder à une levée de doute.\n\nEn effectuant les actions suivantes :\n- Vérifier que les routeurs sont bien alimentés\n- Les redémarrer\n- Nous indiquer l'état des voyants\n\nSerait-il aussi possible de nous fournir les coordonnées d'un contact ainsi que les horaires du site afin de pouvoir prévoir une intervention.\n\nCordialement"
+                        }, {
+                            "texte": "Secours",
+                            "nextsid": null,
+                            "nom": "Demande Levee de Doute Secours",
+                            "actionedsid": "Attente réponse client",
+                            "macro": "T5",
+                            "type": "MsgBrut",
+                            "contenu": "Bonjour,\nSuite à votre incident, le routeur secours est injoignable. Serait-il possible de procéder à une levée de doute.\n\nEn effectuant les actions suivantes :\n- Vérifier que les routeurs sont bien alimentés\n- Les redémarrer\n- Nous indiquer l'état des voyants\n\nSerait-il aussi possible de nous fournir les coordonnées d'un contact ainsi que les horaires du site afin de pouvoir prévoir une intervention.\n\nCordialement"
+                        }, {
+                            "texte": "Les deux",
+                            "nextsid": null,
+                            "nom": "Demande Levee de Doute Deux",
+                            "actionedsid": "Attente réponse client",
+                            "macro": "T5",
+                            "type": "MsgBrut",
+                            "contenu": "Bonjour,\nSuite à votre incident, les routeurs nominal et secours sont injoignables. Serait-il possible de procéder à une levée de doute sur ces deux routeurs.\n\nEn effectuant les actions suivantes :\n- Vérifier que les routeurs sont bien alimentés\n- Les redémarrer\n- Nous indiquer l'état des voyants\n\nSerait-il aussi possible de nous fournir les coordonnées d'un contact ainsi que les horaires du site afin de pouvoir prévoir une intervention.\n\nCordialement"
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "nom": "A2/A9 - Message BOA",
+            "groupes": [{
+                    "nom": "Redémarrage terminé - Lien KO",
+                    "buttons": [{
+                            "texte": "Nominal",
+                            "nextsid": null,
+                            "macro": "A2",
+                            "nom": "Message BOA : Nominal KO Redémarrage",
+                            "actionedsid": "Attente réponse BOA",
+                            "type": "MsgBrut",
+                            "contenu": "Bonjour,\n\nLe routeur nominal est injoignable malgré un redémarrage via la rocade.\n\nPouvez-vous intervenir ?\n\nCordialement"
+                        }, {
+                            "texte": "Secours",
+                            "nextsid": null,
+                            "macro": "A2",
+                            "nom": "Message BOA : Secours KO Redémarrage",
+                            "actionedsid": "Attente réponse BOA",
+                            "type": "MsgBrut",
+                            "contenu": "Bonjour,\n\nLe routeur secours est injoignable malgré un redémarrage via la rocade.\n\nPouvez-vous intervenir ?\n\nCordialement"
+                        }
+                    ]
+                }, {
+                    "nom": "Redémarrage terminé - Bagots",
+                    "buttons": [{
+                            "texte": "Nominal",
+                            "nextsid": null,
+                            "macro": "A2",
+                            "nom": "Message BOA : Nominal bagots Redémarrage",
+                            "actionedsid": "Attente réponse BOA",
+                            "type": "MsgTexte",
+                            "contenu": "Bonjour,\n\nLe routeur nominal présente des bagots malgré un redémarrage.\n\nPouvez-vous intervenir ?\n\nCordialement"
+                        }, {
+                            "texte": "Secours",
+                            "nextsid": null,
+                            "macro": "A2",
+                            "nom": "Message BOA : Secours bagots Redémarrage",
+                            "actionedsid": "Attente réponse BOA",
+                            "type": "MsgTexte",
+                            "contenu": "Bonjour,\n\nLe routeur secours présente des bagots malgré un redémarrage.\n\nPouvez-vous intervenir ?\n\nCordialement"
+                        }
+                    ]
+                }, {
+                    "nom": "Après levée de doute",
+                    "buttons": [{
+                            "texte": "Nominal",
+                            "nextsid": null,
+                            "macro": "A2",
+                            "nom": "Message BOA : Nominal KO Levée de doute",
+                            "actionedsid": "Attente réponse BOA",
+                            "type": "MsgTexte",
+                            "contenu": "Bonjour,\n\nLe routeur nominal est injoignable.\n\nPouvez-vous intervenir ?\n\nCordialement\n\nVoici les résultats de la levée de doute :"
+                        }, {
+                            "texte": "Secours",
+                            "nextsid": null,
+                            "macro": "A2",
+                            "nom": "Message BOA : Secours KO Levée de doute",
+                            "actionedsid": "Attente réponse BOA",
+                            "type": "MsgTexte",
+                            "contenu": "Bonjour,\n\nLe routeur secours est injoignable.\n\nPouvez-vous intervenir ?\n\nCordialement\n\nVoici les résultats de la levée de doute :"
+                        }
+                    ]
+                }, {
+                    "nom": "Autre",
+                    "buttons": [{
+                            "texte": "Relance",
+                            "nextsid": null,
+                            "macro": "A9",
+                            "nom": "Message BOA : Relance",
+                            "actionedsid": "Relance BOA",
+                            "type": "MsgBrut",
+                            "contenu": "Bonjour,\n\nAvez-vous des nouvelles de l'intervention ?\n\nCordialement"
+                        }, {
+                            "texte": "ADELIA",
+                            "nextsid": null,
+                            "macro": "A2",
+                            "nom": "Message BOA : Incident ADELIA",
+                            "actionedsid": "Attente réponse BOA",
+                            "type": "MsgBrut",
+                            "contenu": "Bonjour,\n\nUn incident ADELIA est en cours sur ce site.\n\nPouvez-vous intervenir ?\n\nCordialement"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

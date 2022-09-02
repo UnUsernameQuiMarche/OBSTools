@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="530.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxmavenobs.HelloController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Fichier">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ModifBouton" text="Modifier les boutons" />
+                  <MenuItem mnemonicParsing="false" onAction="#ModifAction" text="Modifier les actions EDS" />
+                  <MenuItem mnemonicParsing="false" onAction="#RestaurationMsg" text="Restaurer les valeurs par defaut" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#Close" text="Fermer" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="A Propos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#About" text="A Propos" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane fx:id="Onglets" prefHeight="512.0" prefWidth="318.0">
+         <tabs>
+            <Tab fx:id="TabAutre" closable="false" onSelectionChanged="#ChangeTab" text="Autre">
+              <content>
+                  <VBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#btnFormatageT5" prefHeight="26.0" prefWidth="1000.0" text="Formattage Contact T5" />
+                        <Separator prefWidth="200.0" />
+                        <Button mnemonicParsing="false" onAction="#btnFormatageA2" prefHeight="26.0" prefWidth="1000.0" text="Formulaire BOA" />
+                        <Separator prefWidth="200.0" />
+                        <ChoiceBox fx:id="ChoiceMsg" prefHeight="26.0" prefWidth="1000.0" />
+                        <Button mnemonicParsing="false" onMouseReleased="#ActionEnCours" prefHeight="26.0" prefWidth="1000.0" text="Ajouter l'action en cours" />
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</VBox>

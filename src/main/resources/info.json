@@ -1,0 +1,12 @@
+{
+  "name": "OBSTools By William",
+  "version": "1.1.1.2",
+  "url_version": "https://raw.githubusercontent.com/WB-44/OBSTools/main/version.txt",
+  "end_date": "01/01/2025",
+  "description": "Project for Orange Business Services",
+  "author": {
+    "name": "William Blot",
+    "email": "william.blot@gmail.com",
+    "url": "none"
+  }
+}
