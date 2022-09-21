@@ -4,7 +4,9 @@
 
 Merci de télécharger les JDKs Java pour l'utilisation de OBSTools
 
-Lien de téléchargement : [JDKs Java](https://www.oracle.com/java/technologies/downloads/)
+Lien de téléchargement : [JDKs Java](https://www.oracle.com/java/technologies/downloads/) 
+(Attention : C'est l'onglet linux qui est sélectionné par défaut. Bien choisir l'onglet windows.
+Le plus simple est de télécharger le fichier ZIP.)
 
 ## Installation
 
