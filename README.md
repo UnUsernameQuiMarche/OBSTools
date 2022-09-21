@@ -1,6 +1,6 @@
 # OBSTools
 
-## Prérrequis
+## Prérequis
 
 Merci de télécharger les JDKs Java pour l'utilisation de OBSTools
 
